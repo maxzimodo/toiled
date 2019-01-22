@@ -22,24 +22,27 @@ document.addEventListener('play', function(e){
 function playThis(el) {
 
     var track = el.previousElementSibling;
+    var trackPreloader = el.nextElementSibling;
+
+    if (trackPreloader.classList.contains('trackPreloader')) {
+        trackPreloader.style.display = 'block';
+    }
+
+    track.addEventListener('canplaythrough', function () {
+        if (trackPreloader.classList.contains('trackPreloader')) {
+            trackPreloader.remove();
+        }
+    }, false);
 
     function pausedView() {
         el.classList.add("paused");
         el.classList.remove("playing");
-        //el.classList.remove("loading");
     }
 
     function playingView() {
         el.classList.add("playing");
         el.classList.remove("paused");
-        //el.classList.remove("loading");
     }
-
-    // function loadingView() {
-    //     el.classList.remove("playing");
-    //     el.classList.remove("paused");
-    //     el.classList.add("loading");
-    // }
 
     if (track.duration > 0 && !track.paused) {
         track.pause();

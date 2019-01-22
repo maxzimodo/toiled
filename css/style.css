@@ -93,10 +93,25 @@ main section:nth-of-type(2n) {
 .paused {
     background: url("../img/play_pause.svg") no-repeat center left;
 }
-.loading {
+.trackPreloader {
     background-color: #fff;
-    border: 1px solid #0071bc!important;
+    border: 1px dashed #0071bc;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: absolute;
+    z-index: 2;
+    font-size: 9px;
+    text-align: center;
+    line-height: 46px;
+    color: #0071bc;
+    display: none;
+    animation: colorShift 1s infinite ease-in-out alternate;
+}
+@keyframes colorShift {
+    from {color: #0071bc;border-color: #0071bc;}
+    to {color: crimson;border-color: crimson;}
 }
 .loading:after {
     content:'loading';
