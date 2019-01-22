@@ -5,6 +5,8 @@ var navItems = document.getElementById("nav").children;
 navItems[actualPage - 1].classList.add("active");
 
 //----------------------------------------audio player------------------------------------------------------------------
+
+
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
     for(var i = 0, len = audios.length; i < len;i++){
@@ -18,6 +20,7 @@ document.addEventListener('play', function(e){
 }, true);
 
 function playThis(el) {
+
     var track = el.previousElementSibling;
 
     if (track.duration > 0 && !track.paused) {
@@ -25,9 +28,15 @@ function playThis(el) {
         el.classList.add("paused");
         el.classList.remove("playing");
     }
+
     else {
         track.play();
         el.classList.add("playing");
         el.classList.remove("paused");
     }
+
+    track.onended = function() {
+        el.classList.add("paused");
+        el.classList.remove("playing");
+    };
 }
