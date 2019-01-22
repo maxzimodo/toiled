@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+body {
+    width: 100%;
+    height: 100vh;
+    color: #231f20;
+    line-height: 1.4em;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.container {
+    width: 500px;
+    margin: auto;
+}
+#header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dadada;
+}
+.audio-player {
+    height: 110px;
+    margin-bottom: 15px;
+}
+.audio-player:last-child {
+    margin-bottom: 0;
+}
+.audio-player button {
+    outline: none;
+    -webkit-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+}
+#nav a {
+    padding: 10px 20px;
+    border: 1px solid #dadada;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+#nav a.active {
+    background-color: #231f20;
+    border: 1px solid #231f20;
+    color: #fff;
+}
+#footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #dadada;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pull-left {
+    float: left;
+}
+strong {
+    font-weight: 700;
+}
+main section {
+    float: left;
+    width: calc(50% - 15px);
+    height: 235px;
+    margin-bottom: 30px;
+}
+.artwork img {
+    width: 100%;
+}
+main section:nth-of-type(2n) {
+    float: right;
+}
+#footer * {
+    font-size: 14px;
+}
+.playing {
+    background: url("../img/play_pause.svg") no-repeat center right;
+}
+.paused {
+    background: url("../img/play_pause.svg") no-repeat center left;
+}
+.loading {
+    background-color: #0071bc;
+}
+.audio-player .description {
+    font-size: 14px;
+    float: left;
+    width: calc(100% - 65px);
+}
+.audio-player .description .track-title {
+    font-size: 16px;
+}
+a {
+    color: #0071bc;
+}
+p {
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+/*-------------------------------------------------preloader----------------------------------------------------------*/
+div#load_screen{
+    background: #fff;
+    opacity: 1;
+    position: fixed;
+    overflow: hidden;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity;
+    transition-duration: .7s;
+}
+div#load_screen .preloader-wheel {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid #231f20;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 575ms infinite linear;
+    -o-animation: cssload-spin 575ms infinite linear;
+    -ms-animation: cssload-spin 575ms infinite linear;
+    -webkit-animation: cssload-spin 575ms infinite linear;
+    -moz-animation: cssload-spin 575ms infinite linear;
+}
+@keyframes cssload-spin {
+    100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+    100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+    100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+    100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+    100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/*----------------------------media queries-------------------------------*/
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+    #header, #footer, #nav, main {
+        padding: 20px 10px;
+        margin: 0;
+    }
+    #header, #footer {
+        background-color: #f3f3f3;
+    }
+    main {
+        padding-top: 10px;
+        min-height: calc(100vh - 174px);
+    }
+    main, main section, .audio-player {
+        height: auto!important;
+    }
+    #header img {
+        width: 170px;
+        display: block;
+    }
+    main section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sounds {
+        margin-bottom: 15px;
+    }
+    .sounds:last-child {
+        margin-bottom: 0;
+    }
+    .artwork img {
+        display: block;
+    }
+    #footer a, .about a {
+        font-size: 16px;
+    }
+}

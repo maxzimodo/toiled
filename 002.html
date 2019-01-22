@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toiled records</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<div id="load_screen"></div>
+<header id="header"></header>
+
+<!------------------------------content goes here---------------------------->
+
+<main class="container clearfix">
+    <section class="artwork">
+        <img src="img/002_cover.jpg" alt="">
+    </section>
+    <section class="description">
+        <div><strong>Release ID: </strong><span id="releaseNumber">002</span></div>
+        <div><strong>Release date: </strong>February 03, 2019</div>
+        <div><strong>Title: </strong>V.A. Cycle things</div>
+        <div><strong>Artists: </strong>Harry Perlo, Maxzim, Maqar</div>
+        <div><strong>Genre: </strong>Tech, house</div>
+        <div><strong>Tracks: </strong>Cycle things, Mathias</div>
+    </section>
+    <section class="sounds">
+        <div class="audio-player clearfix">
+            <audio class="audio" >
+                <source src="snd/002_1.mp3" type="audio/mp3">
+            </audio>
+            <button onclick='playThis(this)' class="paused"></button>
+            <div class="description">
+                <div class="author">Maqar and Maxzim</div>
+                <div class="track-title"><strong>Cycle things</strong></div>
+                <div>House/120bpm/05:54</div>
+            </div>
+        </div>
+    </section>
+    <section class="sounds">
+        <div class="audio-player">
+            <audio class="audio" >
+                <source src="snd/002_2.mp3" type="audio/mp3">
+            </audio>
+            <button onclick='playThis(this)' class="paused"></button>
+            <div class="description">
+                <div class="author">Harry Perlo</div>
+                <div class="track-title"><strong>Mathias</strong></div>
+                <div>Tech/120bpm/03:52</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!--------------------------------------------------------------------------->
+
+<nav id="nav" class="container"></nav>
+<footer id="footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/release.js"></script>
+</body>
+</html>
