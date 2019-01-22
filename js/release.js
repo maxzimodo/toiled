@@ -19,8 +19,6 @@ document.addEventListener('play', function(e){
 
 function playThis(el) {
     var track = el.previousElementSibling;
-    track.addEventListener("loadstart", function() { alert('Load Starts!')}, true);
-    track.addEventListener("canplaythrough", function() { alert('canplaythrough!')}, true);
     if (track.duration > 0 && !track.paused) {
         track.pause();
         el.classList.add("paused");
