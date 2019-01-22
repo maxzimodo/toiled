@@ -23,20 +23,42 @@ function playThis(el) {
 
     var track = el.previousElementSibling;
 
-    if (track.duration > 0 && !track.paused) {
-        track.pause();
+    function pausedView() {
         el.classList.add("paused");
         el.classList.remove("playing");
+        //el.classList.remove("loading");
+    }
+
+    function playingView() {
+        el.classList.add("playing");
+        el.classList.remove("paused");
+        //el.classList.remove("loading");
+    }
+
+    // function loadingView() {
+    //     el.classList.remove("playing");
+    //     el.classList.remove("paused");
+    //     el.classList.add("loading");
+    // }
+
+    if (track.duration > 0 && !track.paused) {
+        track.pause();
+        pausedView();
     }
 
     else {
         track.play();
-        el.classList.add("playing");
-        el.classList.remove("paused");
+        playingView();
     }
 
     track.onended = function() {
-        el.classList.add("paused");
-        el.classList.remove("playing");
+        pausedView()
     };
+    track.onpause = function() {
+        pausedView()
+    };
+    track.onplay = function() {
+        playingView()
+    };
+
 }

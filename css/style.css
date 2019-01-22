@@ -94,7 +94,16 @@ main section:nth-of-type(2n) {
     background: url("../img/play_pause.svg") no-repeat center left;
 }
 .loading {
-    background-color: #0071bc;
+    background-color: #fff;
+    border: 1px solid #0071bc!important;
+    border-radius: 50%;
+}
+.loading:after {
+    content:'loading';
+    color: #0071bc;
+    font-size: 9px;
+    position: relative;
+    top: -2px;
 }
 .audio-player .description {
     font-size: 14px;
