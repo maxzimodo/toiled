@@ -280,7 +280,7 @@ div#load_screen .preloader-wheel {
     }
 }
 
-@media (max-width: 1023px) and (orientation: landscape) {
+@media (max-height: 854px)  {
     body {
         display: block;
     }
