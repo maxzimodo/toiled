@@ -4,6 +4,12 @@ body {
     height: 100vh;
     color: #231f20;
     line-height: 1.4em;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+}
+.whole-wrapper {
+    width: 100%;
 }
 * {
     margin: 0;
@@ -19,11 +25,19 @@ body {
     width: 500px;
     margin: auto;
 }
+.main-wrapper {
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 #header {
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-bottom: 30px;
     border-bottom: 1px solid #dadada;
+    background-color: #f3f3f3;
+}
+#header .toiled-logo {
+    width: 100%;
 }
 .audio-player {
     height: 110px;
@@ -58,8 +72,8 @@ body {
 #footer {
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 30px;
     border-top: 1px solid #dadada;
+    background-color: #f3f3f3;
 }
 .clearfix:after {
     content: "";
@@ -68,6 +82,9 @@ body {
 }
 .pull-left {
     float: left;
+}
+.pull-right {
+    float: right;
 }
 strong {
     font-weight: 700;
@@ -151,6 +168,11 @@ main section:nth-of-type(2n) {
 .audio-player .description .track-title {
     font-size: 16px;
 }
+#footer .soundcloud {
+    width: 40px;
+    vertical-align: middle;
+    margin-top: 2px;
+}
 a {
     color: #0071bc;
 }
@@ -211,6 +233,9 @@ div#load_screen .preloader-wheel {
 
 /*----------------------------media queries-------------------------------*/
 @media (max-width: 500px) {
+    body {
+        display: block;
+    }
     .container {
         width: 100%;
     }
@@ -218,19 +243,20 @@ div#load_screen .preloader-wheel {
         padding: 20px 10px;
         margin: 0;
     }
-    #header, #footer {
-        background-color: #f3f3f3;
+    .main-wrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: calc(100vh - 230px);
     }
     main {
         padding-top: 10px;
-        min-height: calc(100vh - 174px);
     }
     main, main section, .audio-player, .sounds {
         height: auto!important;
         margin-bottom: 20px;
     }
-    #header img {
-        width: 170px;
+    #header .toiled-logo {
+        width: 250px;
         display: block;
     }
     main section {
@@ -245,5 +271,17 @@ div#load_screen .preloader-wheel {
     }
     #footer a, .about a {
         font-size: 16px;
+    }
+    #footer img.soundcloud {
+        margin-top: 13px;
+    }
+    #footer .pull-right {
+        float: none;
+    }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+    body {
+        display: block;
     }
 }

@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
 });
 
 //----------------------------------------header------------------------------------------------------------------------
-document.getElementById("header").innerHTML = '<div class="container"><a href="index.html"><img src="img/label_logo.svg" alt="toiled records"></a></div>';
+document.getElementById("header").innerHTML = '<div class="container"><a href="index.html"><img src="img/label_logo3.svg" alt="toiled records" class="toiled-logo"></a></div>';
 
 //----------------------------------------footer------------------------------------------------------------------------
-document.getElementById("footer").innerHTML = '<div class="container">Small information <a href="about.html">about</a> our label</br>Don’t hesitate to write us letters: <a href="mailto:toiledrec@gmail.com" >toiledrec@gmail.com</a></div>';
+document.getElementById("footer").innerHTML = '<div class="container clearfix"><div class="pull-left">Small information <a href="about.html">about</a> our label</br>Don’t hesitate to write us letters: <a href="mailto:toiledrec@gmail.com" >toiledrec@gmail.com</a></div><div class="pull-right"><a href="https://soundcloud.com/user-903374575" target=""><img src="img/soundcloud.svg" alt="" class="soundcloud"></a></div></div>';
