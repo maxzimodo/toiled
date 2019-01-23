@@ -109,6 +109,7 @@ main section:nth-of-type(2n) {
     display: none;
     animation: colorShift 1s infinite ease-in-out alternate;
 }
+
 @keyframes colorShift {
     from {color: #0071bc;border-color: #0071bc;}
     to {color: crimson;border-color: crimson;}
@@ -120,10 +121,26 @@ main section:nth-of-type(2n) {
     position: relative;
     top: -2px;
 }
+.shops {
+    clear: both;
+    padding-top: 5px;
+    border-top: 1px solid #dadada;
+}
+.shops .logo-wrapper {
+    width: 70px;
+    display: block;
+    cursor: pointer;
+    margin-right: 10px;
+    float: left;
+}
+.shops .logo-wrapper img {
+    width: 100%;
+}
 .audio-player .description {
     font-size: 14px;
     float: left;
     width: calc(100% - 65px);
+    margin-bottom: 5px;
 }
 .audio-player .description .track-title {
     font-size: 16px;
@@ -202,8 +219,9 @@ div#load_screen .preloader-wheel {
         padding-top: 10px;
         min-height: calc(100vh - 174px);
     }
-    main, main section, .audio-player {
+    main, main section, .audio-player, .sounds {
         height: auto!important;
+        margin-bottom: 20px;
     }
     #header img {
         width: 170px;
@@ -212,9 +230,6 @@ div#load_screen .preloader-wheel {
     main section {
         width: 100%;
         margin-bottom: 20px;
-    }
-    .sounds {
-        margin-bottom: 15px;
     }
     .sounds:last-child {
         margin-bottom: 0;
