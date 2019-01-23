@@ -127,14 +127,20 @@ main section:nth-of-type(2n) {
     border-top: 1px solid #dadada;
 }
 .shops .logo-wrapper {
-    width: 70px;
+    width: auto;
     display: block;
     cursor: pointer;
     margin-right: 10px;
     float: left;
 }
+.shops .logo-wrapper:last-of-type {
+    margin-right: 0;
+}
 .shops .logo-wrapper img {
-    width: 100%;
+    height: 9px;
+}
+.shops .logo-wrapper img.applemusic {
+    margin-bottom: 1px;
 }
 .audio-player .description {
     font-size: 14px;
