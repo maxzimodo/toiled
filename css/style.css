@@ -239,10 +239,16 @@ div#load_screen .preloader-wheel {
 .audio-player button {
     transition: opacity 100ms ease-in-out;
 }
-#nav a:hover, #nav a:focus, #nav a:active {
+#nav a:hover {
     background-color: crimson;
     border: 1px solid crimson;
     color: #fff;
+}
+#nav a.active:hover {
+    background-color: #231f20;
+    border: 1px solid #231f20;
+    color: #fff;
+    cursor: default;
 }
 .shops a:hover, #footer a>img:hover, .audio-player button:hover  {
     opacity: .7;

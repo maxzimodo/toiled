@@ -3,7 +3,12 @@ document.getElementById("nav").innerHTML = '<a href="index.html">001</a><a href=
 var actualPage = Number(document.getElementById("releaseNumber").innerHTML);
 var navItems = document.getElementById("nav").children;
 navItems[actualPage - 1].classList.add("active");
-
+navItems[actualPage - 1].addEventListener(
+    'click', stopDefAction, false
+);
+function stopDefAction(evt) {
+    evt.preventDefault();
+}
 //----------------------------------------audio player------------------------------------------------------------------
 
 
