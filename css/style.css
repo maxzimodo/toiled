@@ -231,6 +231,28 @@ div#load_screen .preloader-wheel {
     100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
 }
 
+
+/*--------------------------------------------------hovers----------------*/
+#nav a, .shops a, #footer a>img, #footer a {
+    transition: all 100ms ease-in-out;
+}
+.audio-player button {
+    transition: opacity 100ms ease-in-out;
+}
+#nav a:hover, #nav a:focus, #nav a:active {
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: #fff;
+}
+.shops a:hover, #footer a>img:hover, .audio-player button:hover  {
+    opacity: .7;
+}
+a:hover {
+    text-decoration: none;
+}
+@media (hover: none) {
+    a:hover { color: inherit; }
+}
 /*----------------------------media queries-------------------------------*/
 @media (max-width: 500px) {
     body {
