@@ -250,7 +250,11 @@ div#load_screen .preloader-wheel {
 a:hover {
     text-decoration: none;
 }
-
+@media (hover: none) {
+    .shops a:hover, #footer a>img:hover, .audio-player button:hover  {
+        opacity: 1;
+    }
+}
 /*----------------------------media queries-------------------------------*/
 @media (max-width: 500px) {
     body {
