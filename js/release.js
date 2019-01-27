@@ -26,7 +26,7 @@ document.addEventListener('play', function(e){
 
 function playThis(el) {
 
-    var track = el.previousElementSibling;
+    var track = el.parentNode.querySelector('audio');
     var trackPreloader = el.nextElementSibling;
 
     if (trackPreloader.classList.contains('trackPreloader')) {

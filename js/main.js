@@ -13,6 +13,7 @@ window.addEventListener("load", function(){
     setTimeout(removePreloader, transitionTime);
 });
 
+
 //----------------------------------------header------------------------------------------------------------------------
 document.getElementById("header").innerHTML = '<div class="container"><a href="index.html"><img src="img/label_logo3.svg" alt="toiled records" class="toiled-logo"></a></div>';
 
