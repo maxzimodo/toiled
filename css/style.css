@@ -198,6 +198,8 @@ p:last-child {
     text-transform: uppercase;
     margin-bottom: 15px;
     font-size: 14px;
+    height: 22px;
+    line-height: 22px;
 }
 /*-------------------------------------------------preloader----------------------------------------------------------*/
 div#load_screen{
