@@ -192,7 +192,7 @@ p:last-child {
     margin-bottom: 0;
 }
 .upcoming {
-    background: crimson;
+    background: #0071bc;
     color: #fff;
     padding: 0 7px;
     display: inline-block;
