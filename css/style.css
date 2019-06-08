@@ -107,10 +107,10 @@ main section:nth-of-type(2n) {
     font-size: 14px;
 }
 .playing {
-    background: url("../img/play_pause.svg") no-repeat center right;
+    background: url("../img/play_pause2.svg") no-repeat center right;
 }
 .paused {
-    background: url("../img/play_pause.svg") no-repeat center left;
+    background: url("../img/play_pause2.svg") no-repeat center left;
 }
 .trackPreloader {
     background-color: #fff;
