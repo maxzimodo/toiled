@@ -202,6 +202,7 @@ p:last-child {
     height: 22px;
     line-height: 22px;
     border-radius: 3px;
+    font-weight: 700;
 }
 /*-------------------------------------------------preloader----------------------------------------------------------*/
 div#load_screen{
