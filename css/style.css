@@ -64,6 +64,7 @@ body {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
+    border-radius: 3px;
 }
 #nav a.active {
     background-color: #231f20;
@@ -200,6 +201,7 @@ p:last-child {
     font-size: 14px;
     height: 22px;
     line-height: 22px;
+    border-radius: 3px;
 }
 /*-------------------------------------------------preloader----------------------------------------------------------*/
 div#load_screen{
