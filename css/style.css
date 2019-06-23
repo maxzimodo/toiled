@@ -320,6 +320,14 @@ a:hover {
     .artwork img {
         display: block;
     }
+    #nav a {
+        width: calc(20% - 8px);
+        text-align: center;
+        padding: 10px 0;
+    }
+    #nav a:nth-child(5n) {
+        margin-right: 0;
+    }
     #footer a, .about a {
         font-size: 16px;
     }

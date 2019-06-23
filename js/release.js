@@ -1,5 +1,5 @@
 //----------------------------------------releases nav------------------------------------------------------------------
-document.getElementById("nav").innerHTML = '<a href="001.html">001</a><a href="002.html">002</a><a href="003.html">003</a><a href="index.html">004</a>';
+document.getElementById("nav").innerHTML = '<a href="001.html">001</a><a href="002.html">002</a><a href="003.html">003</a><a href="index.html">004</a><a href="005.html">005</a>';
 var actualPage = Number(document.getElementById("releaseNumber").innerHTML);
 var navItems = document.getElementById("nav").children;
 navItems[actualPage - 1].classList.add("active");
@@ -36,6 +36,7 @@ function playThis(el) {
     track.addEventListener('canplaythrough', function () {
         if (trackPreloader.classList.contains('trackPreloader')) {
             trackPreloader.remove();
+
         }
     }, false);
 
@@ -52,9 +53,7 @@ function playThis(el) {
     if (track.duration > 0 && !track.paused) {
         track.pause();
         pausedView();
-    }
-
-    else {
+    } else {
         track.play();
         playingView();
     }
@@ -69,4 +68,6 @@ function playThis(el) {
         playingView()
     };
 
+
 }
+
