@@ -36,7 +36,6 @@ function playThis(el) {
     track.addEventListener('canplaythrough', function () {
         if (trackPreloader.classList.contains('trackPreloader')) {
             trackPreloader.remove();
-
         }
     }, false);
 

@@ -120,7 +120,7 @@ main section:nth-of-type(2n) {
 }
 .trackPreloader {
     background-color: #fff;
-    border: 1px dashed #0071bc;
+    border: 1px solid crimson;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -130,14 +130,14 @@ main section:nth-of-type(2n) {
     font-size: 9px;
     text-align: center;
     line-height: 46px;
-    color: #0071bc;
+    color: crimson;
     display: none;
-    animation: colorShift 1s infinite ease-in-out alternate;
+    animation: loadingAnimation .1s infinite ease-in-out alternate;
 }
 
-@keyframes colorShift {
-    from {color: #0071bc;border-color: #0071bc;}
-    to {color: crimson;border-color: crimson;}
+@keyframes loadingAnimation {
+    from {color: crimson;}
+    to {color: transparent;}
 }
 .loading:after {
     content:'loading';
