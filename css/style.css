@@ -331,7 +331,7 @@ a:hover {
         text-align: center;
         padding: 10px 0;
     }
-    #nav a:nth-child(7n){
+    #nav a:nth-child(7n), #nav a:nth-child(8n){
         margin-right: 10px;
     }
     #nav a:nth-child(5n) {
