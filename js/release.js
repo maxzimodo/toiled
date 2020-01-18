@@ -1,5 +1,5 @@
 //----------------------------------------releases nav------------------------------------------------------------------
-document.getElementById("nav").innerHTML = '<a href="001.html">001</a><a href="002.html">002</a><a href="003.html">003</a><a href="004.html">004</a><a href="005.html">005</a><a href="006.html">006</a><a href="007.html">007</a><a href="index.html">008</a>';
+document.getElementById("nav").innerHTML = '<a href="001.html">001</a><a href="002.html">002</a><a href="003.html">003</a><a href="004.html">004</a><a href="005.html">005</a><a href="006.html">006</a><a href="007.html">007</a><a href="008.html">008</a><a href="index.html">009</a><a href="010.html">010</a>';
 var actualPage = Number(document.getElementById("releaseNumber").innerHTML);
 var navItems = document.getElementById("nav").children;
 navItems[actualPage - 1].classList.add("active");
